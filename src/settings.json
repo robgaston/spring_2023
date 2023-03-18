@@ -3,8 +3,9 @@
     "accessToken": "pk.eyJ1Ijoicmdhc3RvbiIsImEiOiJJYTdoRWNJIn0.MN6DrT07IEKXadCU8xpUMg",
     "style": "mapbox://styles/rgaston/cleud3ghr000901tjq55m9tm5",
     "center": [
-        -122.27633817369156,
-        37.77484972753561
+        -118.32741294940357,
+        34.04076382207846
     ],
-    "zoom": 14
+    "zoom": 9,
+    "pitch": 40
 }
