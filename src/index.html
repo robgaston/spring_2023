@@ -2,12 +2,36 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Los Angeles Historic Sites Map</title>
     </head>
     <body>
         <main>
+            <header>
+                <h3>
+                    Cataloged Historic Sites in Los Angeles by Neighborhood
+                </h3>
+                <div>
+                    Rob Gaston, March 2023
+                </div>
+            </header>
             <div id="map"></div>
+            <div id="popup">
+                <h3 class="neighborhood-name"></h3>
+                <div>
+                    <span class="count"></span> historic site(s) cataloged
+                </div>
+            </div>
+            <div id="legend">
+                <h3># of sites</h3>
+            </div>
         </main>
+
+        <template id="legend-entry">
+            <div class="entry">
+                <span class="color"></span>
+                <span class="value"></span>
+            </div>
+        </template>
     </body>
     <script src="index.js" type="module"></script>
 </html>

@@ -14,7 +14,16 @@
             "type": "line",
             "source": "neighborhoods",
             "paint": {
-                "line-width": 3
+                "line-width": [
+                    "case",
+                    [
+                        "boolean",
+                        ["feature-state", "hover"],
+                        false
+                    ],
+                    4,
+                    2
+                ]
             },
             "filter": [
                 "!=",
@@ -35,16 +44,39 @@
                     ["get", "count"],
                     "#f1eef6",
                     50, "#d0d1e6",
-                    100, "#a6bddb",
+                    150, "#a6bddb",
                     300, "#74a9cf",
                     600, "#2b8cbe",
                     1000, "#045a8d"
                 ],
                 "fill-extrusion-opacity": 0.8,
                 "fill-extrusion-height": [
-                    "*",
-                    ["get", "count"],
-                    5
+                    "+",
+                    [
+                        "*",
+                        ["get", "count"],
+                        5
+                    ],
+                    [
+                        "case",
+                        [
+                            "boolean",
+                            ["feature-state", "hover"],
+                            false
+                        ],
+                        1000,
+                        0
+                    ]
+                ],
+                "fill-extrusion-base": [
+                    "case",
+                    [
+                        "boolean",
+                        ["feature-state", "hover"],
+                        false
+                    ],
+                    1000,
+                    0
                 ]
             },
             "filter": [
